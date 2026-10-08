@@ -39,9 +39,28 @@ while True:
                 break
 
     elif choice == '2':
-        print("\n[Display Products - to be implemented]")
+        if not products:
+            print("\nInventory is empty. No products to display.")
+        else:
+            print("\n--- Stored Products ---")
+            print(f"{'Code':<10}{'Name':<20}{'Category':<22}{'Price (Rs)':<12}{'Quantity':<10}")
+            print("-" * 74)
+            for code, details in products.items():
+                print(f"{code:<10}{details['name']:<20}{details['category']:<22}{details['price']:<12.2f}{details['quantity']:<10}")
+
     elif choice == '3':
-        print("\n[Search - to be implemented]")
+        code = input("\nEnter Product Code to search: ").strip()
+        if code in products:
+            item = products[code]
+            print("\nProduct Found:")
+            print(f"Code: {code}")
+            print(f"Name: {item['name']}")
+            print(f"Category: {item['category']}")
+            print(f"Price: Rs. {item['price']:.2f}")
+            print(f"Quantity: {item['quantity']}")
+        else:
+            print(f"Product with code '{code}' not found.")
+
     elif choice == '4':
         print("\n[Update - to be implemented]")
     elif choice == '5':
