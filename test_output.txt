@@ -1,0 +1,195 @@
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 1
+
+Enter Product Code: 101
+Enter Product Name: Keyboard
+Enter Category: Computer Accessory
+Enter Price: 750
+Enter Quantity: 15
+Product 'Keyboard' added successfully.
+Do you want to add another product? (y/n): y
+
+Enter Product Code: 102
+Enter Product Name: Mouse
+Enter Category: Computer Accessory
+Enter Price: 550
+Enter Quantity: 8
+Product 'Mouse' added successfully.
+Do you want to add another product? (y/n): y
+
+Enter Product Code: 103
+Enter Product Name: USB Cable
+Enter Category: Electronics
+Enter Price: 250
+Enter Quantity: 20
+Product 'USB Cable' added successfully.
+Do you want to add another product? (y/n): y
+
+Enter Product Code: 104
+Enter Product Name: Webcam
+Enter Category: Computer Accessory
+Enter Price: 1200
+Enter Quantity: 5
+Product 'Webcam' added successfully.
+Do you want to add another product? (y/n): y
+
+Enter Product Code: 105
+Enter Product Name: Laptop Stand
+Enter Category: Office
+Enter Price: 850
+Enter Quantity: 12
+Product 'Laptop Stand' added successfully.
+Do you want to add another product? (y/n): y
+
+Enter Product Code: 101
+Error: Product code already exists. Please enter a unique code.
+Do you want to add another product? (y/n): n
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 2
+
+--- Stored Products ---
+Code      Name                Category              Price (Rs)  Quantity  
+--------------------------------------------------------------------------
+101       Keyboard            Computer Accessory    750.00      15        
+102       Mouse               Computer Accessory    550.00      8         
+103       USB Cable           Electronics           250.00      20        
+104       Webcam              Computer Accessory    1200.00     5         
+105       Laptop Stand        Office                850.00      12        
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 3
+
+Enter Product Code to search: 102
+
+Product Found:
+Code: 102
+Name: Mouse
+Category: Computer Accessory
+Price: Rs. 550.00
+Quantity: 8
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 3
+
+Enter Product Code to search: 999
+Product with code '999' not found.
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 4
+
+Enter Product Code to update price: 102
+Current price for Mouse is Rs. 550.00
+Enter new price: 580
+Price updated successfully.
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 5
+
+Enter Product Code to delete: 103
+Product 'USB Cable' (Code: 103) removed successfully.
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 6
+
+--- Low Stock Products (Quantity < 10) ---
+Code      Name                Category              Price (Rs)  Quantity  
+--------------------------------------------------------------------------
+102       Mouse               Computer Accessory    580.00      8         
+104       Webcam              Computer Accessory    1200.00     5         
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 7
+
+--- Products in Price Range (Rs. 500 - Rs. 1000) ---
+Code      Name                Category              Price (Rs)  Quantity  
+--------------------------------------------------------------------------
+101       Keyboard            Computer Accessory    750.00      15        
+102       Mouse               Computer Accessory    580.00      8         
+105       Laptop Stand        Office                850.00      12        
+
+===== PRODUCT INVENTORY MANAGEMENT =====
+1. Add Product
+2. Display All Products
+3. Search by Product Code
+4. Update Product Price
+5. Delete Product
+6. Low Stock Products (Quantity < 10)
+7. Products in Price Range (Rs 500 - 1000)
+8. Exit
+
+Enter your choice (1-8): 8
+
+Exiting program.
