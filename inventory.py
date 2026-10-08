@@ -16,7 +16,28 @@ while True:
     choice = input("\nEnter your choice (1-8): ").strip()
 
     if choice == '1':
-        print("\n[Add Product - to be implemented]")
+        while True:
+            code = input("\nEnter Product Code: ").strip()
+            if code in products:
+                print("Error: Product code already exists. Please enter a unique code.")
+            else:
+                name = input("Enter Product Name: ").strip()
+                category = input("Enter Category: ").strip()
+                price = float(input("Enter Price: "))
+                quantity = int(input("Enter Quantity: "))
+
+                products[code] = {
+                    'name': name,
+                    'category': category,
+                    'price': price,
+                    'quantity': quantity
+                }
+                print(f"Product '{name}' added successfully.")
+
+            more = input("Do you want to add another product? (y/n): ").strip().lower()
+            if more != 'y':
+                break
+
     elif choice == '2':
         print("\n[Display Products - to be implemented]")
     elif choice == '3':
