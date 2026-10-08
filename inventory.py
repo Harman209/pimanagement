@@ -62,9 +62,25 @@ while True:
             print(f"Product with code '{code}' not found.")
 
     elif choice == '4':
-        print("\n[Update - to be implemented]")
+        code = input("\nEnter Product Code to update price: ").strip()
+        if code in products:
+            old_price = products[code]['price']
+            print(f"Current price for {products[code]['name']} is Rs. {old_price:.2f}")
+            new_price = float(input("Enter new price: "))
+            products[code]['price'] = new_price
+            print("Price updated successfully.")
+        else:
+            print(f"Product with code '{code}' not found.")
+
     elif choice == '5':
-        print("\n[Delete - to be implemented]")
+        code = input("\nEnter Product Code to delete: ").strip()
+        if code in products:
+            deleted_name = products[code]['name']
+            del products[code]
+            print(f"Product '{deleted_name}' (Code: {code}) removed successfully.")
+        else:
+            print(f"Product with code '{code}' not found.")
+
     elif choice == '6':
         print("\n[Low Stock - to be implemented]")
     elif choice == '7':
