@@ -1,5 +1,6 @@
 # product inventory management
 
+
 products = {}
 
 while True:
@@ -82,9 +83,33 @@ while True:
             print(f"Product with code '{code}' not found.")
 
     elif choice == '6':
-        print("\n[Low Stock - to be implemented]")
+        low_stock_list = []
+        for code, details in products.items():
+            if details['quantity'] < 10:
+                record = [code, details['name'], details['category'], details['price'], details['quantity']]
+                low_stock_list.append(record)
+
+        if not low_stock_list:
+            print("\nNo products found with quantity less than 10.")
+        else:
+            print("\n--- Low Stock Products (Quantity < 10) ---")
+            print(f"{'Code':<10}{'Name':<20}{'Category':<22}{'Price (Rs)':<12}{'Quantity':<10}")
+            print("-" * 74)
+            for item in low_stock_list:
+                print(f"{item[0]:<10}{item[1]:<20}{item[2]:<22}{item[3]:<12.2f}{item[4]:<10}")
+
     elif choice == '7':
-        print("\n[Price Range - to be implemented]")
+        found = False
+        print("\n--- Products in Price Range (Rs. 500 - Rs. 1000) ---")
+        print(f"{'Code':<10}{'Name':<20}{'Category':<22}{'Price (Rs)':<12}{'Quantity':<10}")
+        print("-" * 74)
+        for code, details in products.items():
+            if 500 <= details['price'] <= 1000:
+                print(f"{code:<10}{details['name']:<20}{details['category']:<22}{details['price']:<12.2f}{details['quantity']:<10}")
+                found = True
+        if not found:
+            print("No products found in the price range Rs. 500 to Rs. 1000.")
+
     elif choice == '8':
         print("\nExiting program.")
         break
